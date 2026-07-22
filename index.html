@@ -543,7 +543,8 @@ function contactPage() {
           <div id="formMsg"></div>
           <form onsubmit="submitBooking(event)" class="mt-6 grid sm:grid-cols-2 gap-5">
             <div><label class="text-sm tracking-[0.25em] uppercase text-[#b08d4f] font-black">Full name *</label><input required name="name" class="mt-2 w-full px-4 py-3 rounded-lg bg-[#f8f5f0] border border-[#e8e2d8] focus:outline-none focus:border-[#b08d4f]"/></div>
-            <div><label class="text-sm tracking-[0.25em] uppercase text-[#b08d4f] font-black">Phone *</label><input required name="phone" class="mt-2 w-full px-4 py-3 rounded-lg bg-[#f8f5f0] border border-[#e8e2d8] focus:outline-none focus:border-[#b08d4f]"/></div>
+            <div><label class="text-sm tracking-[0.25em] uppercase text-[#b08d4f] font-black">Phone *</label><input required type="tel" name="phone" pattern="[0-9]{10}" maxlength="10" title="Please enter a 10-digit phone number"
+  class="mt-2 w-full px-4 py-3 rounded-lg bg-[#f8f5f0] border border-[#e8e2d8] focus:outline-none focus:border-[#b08d4f]"/></div>
             <div class="sm:col-span-2"><label class="text-sm tracking-[0.25em] uppercase text-[#b08d4f] font-black">Email</label><input type="email" name="email" class="mt-2 w-full px-4 py-3 rounded-lg bg-[#f8f5f0] border border-[#e8e2d8] focus:outline-none focus:border-[#b08d4f]"/></div>
             <div><label class="text-sm tracking-[0.25em] uppercase text-[#b08d4f] font-black">Preferred salon <span class="text-[#c8a96a]">*</span></label><select name="studio" required class="mt-2 w-full px-4 py-3 rounded-lg bg-[#f8f5f0] border border-[#e8e2d8]"><option value="" disabled selected hidden>Select salon</option>${LOCATIONS.map(l=>`<option value="${l.name}">${l.name}</option>`).join('')}</select></div>
             <div><label class="text-sm tracking-[0.25em] uppercase text-[#b08d4f] font-black">Service <span class="text-[#c8a96a]">*</span></label><select name="service" required class="mt-2 w-full px-4 py-3 rounded-lg bg-[#f8f5f0] border border-[#e8e2d8]"><option value="" disabled selected hidden>Select service</option>${MENU.map(m=>`<option value="${m.title}">${m.title}</option>`).join('')}</select></div>
@@ -711,7 +712,11 @@ function submitBooking(e) {
   e.preventDefault();
   const fd = new FormData(e.target);
   const data = Object.fromEntries(fd.entries());
-
+  const phone = (data.phone || '').replace(/\D/g, ''); // strips out spaces/dashes if any
+  if (phone.length !== 10) {
+    document.getElementById('formMsg').innerHTML = '<div class="mt-5 p-3 rounded-lg bg-red-50 text-red-600 font-black text-sm">Please enter a valid 10-digit phone number.</div>';
+    return; // stops here, doesn't submit
+  }
   // Local backup copy (kept as a fallback record in the browser)
   const existing = JSON.parse(localStorage.getItem('bookings')||'[]');
   existing.push({ ...data, at: new Date().toISOString() });
