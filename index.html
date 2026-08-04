@@ -58,7 +58,7 @@
       <a href="#/contact" onclick="event.preventDefault(); nav('/contact')" class="nav-link text-[13px] tracking-[0.22em] uppercase text-[#000000] hover:text-[#c8a96a]" data-path="/contact">Contact</a>
     </nav>
     <div class="hidden lg:flex items-center gap-3">
-      <a href="tel:+919741029513" class="text-[12px] tracking-[0.2em] uppercase text-[#000000] hover:text-[#c8a96a]">+91 97410 29513</a>
+
       <a href="#/contact" onclick="event.preventDefault(); nav('/contact')" class="inline-flex items-center px-5 py-2.5 rounded-full bg-[#c8a96a] text-[#f8f5f0] text-[12px] tracking-[0.22em] uppercase hover:bg-[#b08d4f]">Book Now</a>
     </div>
     <button id="mobToggle" class="lg:hidden p-2 text-[#000000] font-black" onclick="document.getElementById('mobMenu').classList.toggle('hidden')">☰</button>
@@ -141,17 +141,17 @@ const MENU = [
     { name:'Wash & Paddle Dry', items:[['Shoulder','₹500'],['Midback','₹650'],['Waist & Below','₹800']] },
     { name:'Wash & Straight Blow Dry', items:[['Shoulder','₹600'],['Midback','₹900'],['Waist & Below','₹1,200']] },
     { name:'Wash & Ultimate Blow Dry', items:[['Shoulder','₹650'],['Midback','₹950'],['Waist & Below','₹1,200']] },
-    { name:'Styling & Add-Ons', items:[['Roller Set / Volume','₹400'],['Oil Wash / Premium Wash','₹300'],['Hair Booster — Shine / Colour / Volume','₹600'],['Hair Bond Repair','₹1,500'],['Crimping / Ironing — Up to Shoulder','₹1,000'],['Crimping / Ironing — Up to Midback','₹1,300'],['Crimping / Ironing — Waist & Below','₹1,700'],['Tongs / Roller Set — Up to Shoulder','₹1,300'],['Tongs / Roller Set — Up to Midback','₹1,700'],['Tongs / Roller Set — Waist & Below','₹2,100'],['Upstyle — Braids','₹600'],['Upstyle — Classic','₹1,400'],['Upstyle — Creative','₹2,400']] },
     { name:'Scalp Care Treatments', items:[['Anti-Dandruff Scalp Treatment','₹2,500'],['Hair Fall Control Therapy','₹2,500'],['Hair Growth Activation Therapy','₹2,500'],['Oil Balance Scalp Therapy','₹2,500'],['Dry Scalp Repair Therapy','₹2,500']] },
-    { name:'Refresh Insta Care Spa', items:[['Up to Shoulder','₹800'],['Up to Midback','₹1,000'],['Waist & Below','₹1,200']] },
-    { name:'Nourish & Shine Spa', items:[['Up to Shoulder','₹1,000'],['Up to Midback','₹1,200'],['Waist & Below','₹1,400']] },
-    { name:'Frizz Control Spa', items:[['Up to Shoulder','₹1,200'],['Up to Midback','₹1,400'],['Waist & Below','₹1,600']] },
-    { name:'Scalp Balance Spa', items:[['Up to Shoulder','₹1,600'],['Up to Midback','₹1,800'],['Waist & Below','₹2,000']] },
-    { name:'Protein Infusion Spa', items:[['Up to Shoulder','₹1,600'],['Up to Midback','₹1,800'],['Waist & Below','₹2,000']] },
-    { name:'Revitalizing Caviar Silk Therapy', items:[['Up to Shoulder','₹2,200'],['Up to Midback','₹2,500'],['Waist & Below','₹3,000']] },
-    { name:'Intense Restore Caviar Hydra Therapy', items:[['Up to Shoulder','₹2,200'],['Up to Midback','₹2,500'],['Waist & Below','₹3,000']] },
-    { name:'Intensive Bond Repair Treatment', items:[['Up to Shoulder','₹3,500'],['Up to Midback','₹3,800'],['Waist & Below','₹4,200']] },
-    { name:'Signature Ritual Spa', items:[['Up to Shoulder','₹4,500'],['Up to Midback','₹5,000'],['Waist & Below','₹5,500']] },
+    { name:'Styling & Add-Ons', items:[['Roller Set / Volume','₹400'],['Oil Wash / Premium Wash','₹300'],['Hair Booster — Shine / Colour / Volume','₹600'],['Hair Bond Repair','₹1,500'],['Crimping / Ironing — Up to Shoulder','₹1,000'],['Crimping / Ironing — Up to Midback','₹1,300'],['Crimping / Ironing — Waist & Below','₹1,700'],['Tongs / Roller Set — Up to Shoulder','₹1,300'],['Tongs / Roller Set — Up to Midback','₹1,700'],['Tongs / Roller Set — Waist & Below','₹2,100'],['Upstyle — Braids','₹600'],['Upstyle — Classic','₹1,400'],['Upstyle — Creative','₹2,400']] },
+    { name:'Refresh Insta Care Spa', category:'spa', items:[['Up to Shoulder','₹800'],['Up to Midback','₹1,000'],['Waist & Below','₹1,200']] },
+    { name:'Nourish & Shine Spa', category:'spa', items:[['Up to Shoulder','₹1,000'],['Up to Midback','₹1,200'],['Waist & Below','₹1,400']] },
+    { name:'Frizz Control Spa', category:'spa', items:[['Up to Shoulder','₹1,200'],['Up to Midback','₹1,400'],['Waist & Below','₹1,600']] },
+    { name:'Scalp Balance Spa', category:'spa', items:[['Up to Shoulder','₹1,600'],['Up to Midback','₹1,800'],['Waist & Below','₹2,000']] },
+    { name:'Protein Infusion Spa', category:'spa', items:[['Up to Shoulder','₹1,600'],['Up to Midback','₹1,800'],['Waist & Below','₹2,000']] },
+    { name:'Revitalizing Caviar Silk Therapy', category:'spa', items:[['Up to Shoulder','₹2,200'],['Up to Midback','₹2,500'],['Waist & Below','₹3,000']] },
+    { name:'Intense Restore Caviar Hydra Therapy', category:'spa', items:[['Up to Shoulder','₹2,200'],['Up to Midback','₹2,500'],['Waist & Below','₹3,000']] },
+    { name:'Intensive Bond Repair Treatment', category:'spa', items:[['Up to Shoulder','₹3,500'],['Up to Midback','₹3,800'],['Waist & Below','₹4,200']] },
+    { name:'Signature Ritual Spa', category:'spa', items:[['Up to Shoulder','₹4,500'],['Up to Midback','₹5,000'],['Waist & Below','₹5,500']] },
     { name:'Hair Colour — Touch-Ups', items:[['Crown Touch-Up (Regular)','₹800'],['Root Touch-Up (2")','₹1,400'],['Root Touch-Up (4")','₹2,000'],['Natural Touch-Up — Crown (Ammonia Free)','₹1,000'],['Natural Touch-Up — Root 2" (Ammonia Free)','₹1,600'],['Natural Touch-Up — Root 4" (Ammonia Free)','₹2,200']] },
     { name:'Global Hair Colour', items:[['Up to Shoulder','₹3,000'],['Up to Midback','₹4,000'],['Waist & Below','₹5,000']] },
     { name:'Natural Global Hair Colour', items:[['Up to Shoulder','₹4,000'],['Up to Midback','₹5,000'],['Waist & Below','₹6,000']] },
@@ -160,10 +160,11 @@ const MENU = [
     { name:'T-Section Highlights', items:[['Up to Shoulder','₹2,900'],['Up to Midback','₹3,600'],['Waist & Below','₹4,600']] },
     { name:'Full Highlights', items:[['Up to Shoulder','₹5,200'],['Up to Midback','₹6,200'],['Waist & Below','₹7,100']] },
     { name:'Pre-Lightening (per foil)', items:[['Fringe','₹200'],['Up to Shoulder','₹600'],['Up to Midback','₹800'],['Waist & Below','₹1,100']] },
+    { name:'Pre-Lightening', items:[['Fringe','₹1,000'],['Up to Shoulder','₹3,800'],['Up to Midback','₹5,700'],['Waist & Below','₹6,700']] },
     { name:'Vibrant Colours', items:[['Foil','₹400'],['Crown','₹1,000'],['T-Section','₹1,400'],['Up to Shoulder','₹1,900'],['Up to Midback','₹2,900'],['Waist & Below','₹3,800']] },
     { name:'Colour Add-Ons', items:[['Balayage / Foilage / Ombré / Sombre — extra charge','₹950'],['Extra Thickness','₹1,000'],['Extra Length','₹1,000']] },
-    { name:'Colour Refresher', items:[['Tone on Tone — Up to Shoulder','₹1,200'],['Tone on Tone — Up to Midback','₹1,500'],['Tone on Tone — Waist & Below','₹1,800']] },
-    { name:'Smooth Renewal Treatment', items:[['Fringe','₹1,500'],['Up to Shoulder','₹5,000'],['Up to Midback','₹6,000'],['Waist & Below','₹8,000']] },
+    { name:'Tone on Tone – Colour Refreshner', items:[['Up to Shoulder','₹1,200'],['Up to Midback','₹1,500'],['Waist & Below','₹1,800']] },
+    { name:'Smooth Renewal Treatment', items:[['Fringe','₹1,500'],['Crown','₹2,500'],['Up to Shoulder','₹5,000'],['Up to Midback','₹6,000'],['Waist & Below','₹8,000']] },
     { name:'Kera Silk Botox Treatment', items:[['Fringe','₹2,700'],['Up to Shoulder','₹6,300'],['Up to Midback','₹7,200'],['Waist & Below','₹8,100']] },
     { name:'Nano-Tech Silk Infusion Treatment', items:[['Fringe','₹4,500'],['Up to Shoulder','₹7,200'],['Up to Midback','₹9,000'],['Waist & Below','₹10,800']] },
     { name:'Bond Restore Treatment', items:[['Fringe','₹3,150'],['Up to Shoulder','₹6,750'],['Up to Midback','₹8,550'],['Waist & Below','₹10,350']] },
@@ -195,11 +196,20 @@ const MENU = [
     { name:'Head Massage', items:[['Pure Coconut Oil Massage','₹500'],['Ayurvedic Oil Massage','₹700'],['Moroccan Oil Massage','₹1,500']] },
   ]},
   { id:'makeup', number:'05', title:'Make Up', subtitle:'Flawless looks for every occasion with premium products and expertise.', image:'https://images.unsplash.com/photo-1679141335715-18e7c98486e3?auto=format&fit=crop&w=900&q=80', groups:[
-    { name:'Everyday, Trial & Draping', items:[['Saree Drape — Classic','₹500'],['Saree Drape — Special','₹800'],['Trial Makeup — Classic','₹600'],['Trial Makeup — Creative','₹900'],['Trial Makeup — Airbrush','₹1,200'],['Trial Makeup — Premium Airbrush','₹1,500']] },
-    { name:'Eye Makeup & Corporate', items:[['Eye Makeup','₹1,500'],['Eye Makeup — Senior','₹1,800'],['Eyelash Application','₹800'],['Corporate Makeup — Basic','₹1,800'],['Corporate Makeup — Advanced','₹2,300'],['Corporate Makeup — Creative','₹2,800']] },
-    { name:'Festive & Party Glam', items:[['Festive Glam Look — Advanced Style','₹2,500'],['Festive Glam Look — Creative Style','₹3,000'],['Party Glam Look (Advanced Style) — Basic Makeup','₹2,500'],['Party Glam Look (Advanced Style) — Advanced Makeup','₹3,000'],['Party Glam Look (Advanced Style) — Airbrush Makeup','₹4,000'],['Party Glam Look (Creative Style) — Basic Makeup','₹6,000'],['Party Glam Look (Creative Style) — Advanced Makeup','₹7,000'],['Party Glam Look (Creative Style) — Airbrush Makeup','₹8,000']] },
-    { name:'Bridal & Wedding Season', items:[['Bridal Glam Look — Basic Makeup','₹5,000'],['Bridal Glam Look — Advanced Makeup','₹6,000'],['Bridal Glam Look — Airbrush Makeup','₹8,000'],['Reception Glam (Advanced Style) — Basic Makeup','₹6,000'],['Reception Glam (Advanced Style) — Advanced Makeup','₹8,000'],['Reception Glam (Advanced Style) — Airbrush Makeup','₹10,000'],['Reception Glam (Creative Style) — Basic Makeup','₹8,000'],['Reception Glam (Creative Style) — Advanced Makeup','₹10,000'],['Reception Glam (Creative Style) — Airbrush Makeup','₹12,000'],['Ritual Glam Look (Advanced Style) — Basic Makeup','₹3,000'],['Ritual Glam Look (Advanced Style) — Advanced Makeup','₹4,000'],['Ritual Glam Look (Advanced Style) — Airbrush Makeup','₹6,000'],['Ritual Glam Look (Creative Style) — Basic Makeup','₹12,000'],['Ritual Glam Look (Creative Style) — Advanced Makeup','₹16,000'],['Ritual Glam Look (Creative Style) — Airbrush Makeup','₹20,000']] },
-    { name:'Groom & Bridal Touch-Up', items:[['Groom Glam Look — Advanced Style','₹3,000'],['Groom Glam Look — Creative Style','₹4,000'],['Bridal Touch-Up — Basic Makeup','₹2,500'],['Bridal Touch-Up — Advanced Makeup','₹3,000'],['Bridal Touch-Up — Airbrush Makeup','₹3,500']] },
+    { name:'Saree Drape', items:[['Classic','₹500'],['Special','₹800']] },
+    { name:'Trial Makeup Session', items:[['Classic','₹600'],['Creative','₹900'],['Airbrush','₹1,200'],['Premium Airbrush','₹1,500']] },
+    { name:'Eye Makeup', items:[['Eye Makeup','₹1,500'],['Eye Makeup — Senior','₹1,800'],['Eyelash Application','₹800']] },
+    { name:'Corporate Makeup', items:[['Basic','₹1,800'],['Advanced','₹2,300'],['Creative','₹2,800']] },
+    { name:'Festive Glam Look', items:[['Advanced','₹2,500'],['Creative','₹3,000']] },
+    { name:'Party Glam Look — Advanced', items:[['Basic','₹2,500'],['Advanced','₹3,000'],['Airbrush','₹4,000']] },
+    { name:'Party Glam Look — Creative', items:[['Basic','₹6,000'],['Advanced','₹7,000'],['Airbrush','₹8,000']] },
+    { name:'Groom Glam Look', items:[['Advanced','₹3,000'],['Creative','₹4,000']] },
+    { name:'Bridal Glam Look', items:[['Basic','₹5,000'],['Advanced','₹6,000'],['Airbrush','₹8,000']] },
+    { name:'Reception Glam Look — Advanced', items:[['Basic','₹6,000'],['Advanced','₹8,000'],['Airbrush','₹10,000']] },
+    { name:'Reception Glam Look — Creative', items:[['Basic','₹8,000'],['Advanced','₹10,000'],['Airbrush','₹12,000']] },
+    { name:'Ritual Glam Look — Advanced', items:[['Basic','₹3,000'],['Advanced','₹4,000'],['Airbrush','₹6,000']] },
+    { name:'Ritual Glam Look — Creative', items:[['Basic','₹12,000'],['Advanced','₹16,000'],['Airbrush','₹20,000']] },
+    { name:'Bridal Touch-Up', items:[['Basic','₹2,500'],['Advanced','₹3,000'],['Airbrush','₹3,500']] },
   ]},
   { id:'nails', number:'06', title:'Nails', subtitle:'Trendy nail artistry and long-lasting nail care.', image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80', groups:[
     { name:'Stick-On Nails', items:[['Per Tip','₹120'],['Full Set','₹1,200'],['Removal','₹200']] },
@@ -481,7 +491,7 @@ function servicesPage(activeId) {
             <div class="mt-6 overflow-hidden rounded-2xl border border-[#e8e2d8]"><img src="${m.image}" class="w-full h-64 object-cover"/></div>
           </div>
           <div class="lg:col-span-2 grid sm:grid-cols-2 gap-8">
-            ${m.groups.map(g=>`<div><h3 class="svc-group-title font-serif text-xl text-[#b08d4f] font-black border-b border-[#e8e2d8] pb-3">${g.name}</h3><ul class="svc-list">${g.items.map(([n,p])=>`<li class="price-row"><span class="svc-name">${n}</span><span class="svc-price">${p}</span></li>`).join('')}</ul></div>`).join('')}
+            ${m.groups.map((g,gi)=>`${g.category==='spa' && m.groups[gi-1]?.category!=='spa' ? `<div class="sm:col-span-2 mt-2 mb-1"><p class="font-serif text-xl text-[#b08d4f] font-black" style="text-decoration:underline;text-underline-offset:4px;">Spa</p></div>` : ''}<div><h3 class="svc-group-title font-serif text-xl text-[#b08d4f] font-black border-b border-[#e8e2d8] pb-3">${g.name}</h3><ul class="svc-list">${g.items.map(([n,p])=>`<li class="price-row"><span class="svc-name">${n}</span><span class="svc-price">${p}</span></li>`).join('')}</ul></div>`).join('')}
           </div>
         </div>
       </section>
