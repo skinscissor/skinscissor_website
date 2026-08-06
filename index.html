@@ -199,11 +199,11 @@ const MENU = [
     { name:'Saree Drape', items:[['Classic','₹500'],['Special','₹800']] },
     { name:'Trial Makeup Session', items:[['Classic','₹600'],['Creative','₹900'],['Airbrush','₹1,200'],['Premium Airbrush','₹1,500']] },
     { name:'Eye Makeup', items:[['Eye Makeup','₹1,500'],['Eye Makeup — Senior','₹1,800'],['Eyelash Application','₹800']] },
-    { name:'Corporate Makeup', items:[['Basic','₹1,800'],['Advanced','₹2,300'],['Creative','₹2,800']] },
-    { name:'Festive Glam Look', items:[['Advanced','₹2,500'],['Creative','₹3,000']] },
+    { name:'Corporate Makeup', items:[['Makeup - Basic','₹1,800'],['Makeup - Advanced','₹2,300'],['Makeup - Creative','₹2,800']] },
+    { name:'Festive Glam Look', items:[['Makeup - Advanced','₹2,500'],['Makeup - Creative','₹3,000']] },
     { name:'Party Glam Look — Advanced', items:[['Basic','₹2,500'],['Advanced','₹3,000'],['Airbrush','₹4,000']] },
     { name:'Party Glam Look — Creative', items:[['Basic','₹6,000'],['Advanced','₹7,000'],['Airbrush','₹8,000']] },
-    { name:'Groom Glam Look', items:[['Advanced','₹3,000'],['Creative','₹4,000']] },
+    { name:'Groom Glam Look', items:[['Makeup Advanced','₹3,000'],['Makeup - Creative','₹4,000']] },
     { name:'Bridal Glam Look', items:[['Basic','₹5,000'],['Advanced','₹6,000'],['Airbrush','₹8,000']] },
     { name:'Reception Glam Look — Advanced', items:[['Basic','₹6,000'],['Advanced','₹8,000'],['Airbrush','₹10,000']] },
     { name:'Reception Glam Look — Creative', items:[['Basic','₹8,000'],['Advanced','₹10,000'],['Airbrush','₹12,000']] },
@@ -232,11 +232,19 @@ const MENU = [
   { id:'wellness', number:'08', title:'Wellness & Memberships', subtitle:'Because self-care isn\'t a luxury — it\'s a lifestyle.', image:'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80', groups:[
     { name:'Memberships (Lifetime Validity)', items:[['Invest ₹5,000 → Get Services Worth','₹6,000'],['Invest ₹10,000 → Get Services Worth','₹12,500'],['Invest ₹20,000 → Get Services Worth','₹27,000'],['Invest ₹50,000 → Get Services Worth','₹70,000'],['Invest ₹1,00,000 → Get Services Worth','₹1,50,000']] },
 {
-  name: 'Group Offers & Glow Hours',
+  name: 'Package Deal',
   items: [
     ['Buy 2 Services<br><small>Get 1 FREE Service • Valid for 5 Months</small>', '1 FREE'],
     ['Buy 5 Services<br><small>Get 3 FREE Services • Valid for 10 Months</small>', '3 FREE'],
-    ['Buy 7 Services<br><small>Get 5 FREE Services • Valid for 12 Months</small>', '5 FREE'],['Glow Hours Mon–Thu 11am–3pm — Spend ₹2,000','₹200 Wallet Reward'],['Glow Hours — Spend ₹5,000','₹500 Wallet Reward'],['Glow Hours — Spend ₹8,000','₹800 Wallet Reward']] },
+    ['Buy 7 Services<br><small>Get 5 FREE Services • Valid for 12 Months</small>', '5 FREE'],
+  ] },
+{
+  name: 'Glow Hours',
+  items: [
+    ['Glow Hours Mon–Thu 11am–3pm — Spend ₹2,000','₹200 Wallet Reward'],
+    ['Glow Hours — Spend ₹5,000','₹500 Wallet Reward'],
+    ['Glow Hours — Spend ₹8,000','₹800 Wallet Reward'],
+  ] },
     { name:'Discounts & Refer and Earn', items:[['Senior Citizen Discount (60+ yrs)','15% Off'],['Birthday / Anniversary Month','20% Off'],['Student Discount (valid 1 yr)','20% Off'],['Professional Discount (valid 1 yr)','15% Off'],['Badge of Honour — Armed Forces','20% Off'],['Refer & Earn — You Get','₹500 Wallet Credit'],['Refer & Earn — Friend Gets','20% Off First Service']] },
   ]},
 ];
@@ -283,7 +291,7 @@ const GALLERY = [
 function homePage() {
   const marqueeText = 'Refined Beauty ✦ Honest Care ✦ Real Results ✦ Premium Products ✦ Expert Stylists ✦ For Everyone — Men · Women · Kids ✦ ';
   return `
-  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-24 overflow-hidden">
     <div class="absolute inset-0 pointer-events-none opacity-[0.06]" style="background:radial-gradient(circle at 30% 20%, #c8a96a, transparent 60%), radial-gradient(circle at 80% 70%, #b08d4f, transparent 60%);"></div>
     <div class="w-full px-6 lg:px-12 grid lg:grid-cols-2 gap-14 items-center relative">
       <div>
@@ -321,40 +329,40 @@ function homePage() {
     </div>
   </div>
 
-  <section class="py-24 lg:py-32">
+  <section class="py-20 lg:py-24">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Our Vision</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1a1a1a] max-w-3xl leading-tight">A modern beauty destination where <span class="italic text-[#b08d4f] font-black">self-care</span> becomes a lifestyle.</h2>
       <p class="mt-6 max-w-2xl text-lg text-[#3a3a3a] leading-relaxed">Consistency is the key to flawless skin &amp; healthy hair.</p>
-      <div class="mt-16 grid md:grid-cols-3 gap-8">
+      <div class="mt-12 grid md:grid-cols-3 gap-8">
         ${PHILOSOPHY.map(p=>`<div class="p-8 rounded-2xl border border-[#e8e2d8] bg-[#ffffff] hover:shadow-xl hover:-translate-y-1 transition-all"><div class="w-14 h-14 rounded-full border-2 border-[#b08d4f]/50 flex items-center justify-center font-serif text-2xl text-[#b08d4f] font-black">${p.letter}</div><h3 class="mt-6 font-serif text-2xl text-[#1a1a1a]">${p.title}</h3><p class="mt-3 text-lg text-[#3a3a3a] leading-relaxed">${p.desc}</p></div>`).join('')}
       </div>
     </div>
   </section>
 
-  <section class="py-24 lg:py-32 bg-[#f0eae0]/60">
+  <section class="py-20 lg:py-24 bg-[#f0eae0]/60">
     <div class="w-full px-6 lg:px-12">
       <div class="flex flex-wrap items-end justify-between gap-6">
         <div><p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Our Universe</p><h2 class="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1a1a1a] max-w-3xl leading-tight">Beauty is more than a service.<br/><span class="italic text-[#b08d4f] font-black">It's an experience.</span></h2></div>
         <a href="#/services" onclick="event.preventDefault(); nav('/services')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#c8a96a]/40 text-[#c8a96a] font-black text-sm tracking-[0.25em] uppercase hover:bg-[#c8a96a] hover:text-[#f8f5f0]">See full menu →</a>
       </div>
-      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         ${UNIVERSE.map(u=>`<a href="#/services" onclick="event.preventDefault(); nav('/services','${u.id}')" class="group relative overflow-hidden rounded-2xl bg-[#222222] shadow-lg block"><img src="${u.image}" class="w-full h-72 object-cover opacity-80 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500"/><div class="absolute inset-0" style="background:linear-gradient(to top, #222222, rgba(34,34,34,.3), transparent);"></div><div class="absolute inset-0 p-6 flex flex-col justify-between text-[#f8f5f0]"><span class="text-sm tracking-[0.35em] uppercase text-[#c8a96a] font-black">${u.number}</span><div><h3 class="font-serif text-3xl">${u.title}</h3><p class="mt-2 text-sm text-[#f8f5f0]/80 max-w-xs">${u.desc}</p></div></div></a>`).join('')}
       </div>
     </div>
   </section>
 
-  <section class="py-24 lg:py-32">
+  <section class="py-20 lg:py-24">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Why Skin &amp; Scissor</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1a1a1a] max-w-3xl leading-tight">Premium care. Personalised service. <span class="italic text-[#b08d4f] font-black">Visible results.</span></h2>
-      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
         ${WHY.map((w,i)=>`<div class="p-6 rounded-2xl border border-[#e8e2d8] bg-[#ffffff]"><span class="text-sm tracking-[0.3em] text-[#b08d4f] font-black">0${i+1}</span><h4 class="mt-4 font-serif text-xl text-[#1a1a1a]">${w.title}</h4><p class="mt-2 text-lg text-[#3a3a3a] leading-relaxed">${w.desc}</p></div>`).join('')}
       </div>
     </div>
   </section>
 
-  <section class="py-24 lg:py-32 bg-[#222222] text-[#f5f2ec]">
+  <section class="py-20 lg:py-24 bg-[#222222] text-[#f5f2ec]">
     <div class="w-full px-6 lg:px-12 grid lg:grid-cols-2 gap-14 items-center">
       <div>
         <p class="text-sm tracking-[0.35em] uppercase text-[#c8a96a] font-black">Signature Ritual</p>
@@ -372,17 +380,17 @@ function homePage() {
     </div>
   </section>
 
-  <section class="py-24 lg:py-32">
+  <section class="py-20 lg:py-24">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Our Beliefs</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1a1a1a] max-w-4xl leading-tight">Beauty. Precision. Confidence. <span class="italic text-[#b08d4f] font-black">That's what we believe in.</span></h2>
-      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         ${BELIEFS.map((b,i)=>`<div class="p-8 rounded-2xl bg-[#ffffff] border border-[#e8e2d8] hover:shadow-lg"><span class="text-sm tracking-[0.3em] text-[#b08d4f] font-black">0${i+1}</span><h4 class="mt-3 font-serif text-2xl text-[#1a1a1a]">${b.title}</h4><p class="mt-2 text-lg text-[#3a3a3a] leading-relaxed">${b.desc}</p></div>`).join('')}
       </div>
     </div>
   </section>
 
-  <section class="py-24 lg:py-32 bg-[#f0eae0]/60">
+  <section class="py-20 lg:py-24 bg-[#f0eae0]/60">
     <div class="w-full px-6 lg:px-12">
       <div class="flex flex-wrap items-end justify-between gap-6">
         <div><p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Find Us</p><h2 class="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1a1a1a]">Salons across <span class="italic text-[#b08d4f] font-black">Bangalore.</span></h2></div>
@@ -394,7 +402,7 @@ function homePage() {
     </div>
   </section>
 
-  <section class="py-24 lg:py-32">
+  <section class="py-20 lg:py-24">
     <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Thank you for choosing us</p>
       <h2 class="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1a1a1a] leading-tight">More than a salon.<br/><span class="italic text-[#b08d4f] font-black">It's an experience...</span></h2>
@@ -407,14 +415,14 @@ function homePage() {
 
 function aboutPage() {
   return `
-  <section class="pt-36 pb-16 lg:pt-44 lg:pb-24">
+  <section class="pt-36 pb-20 lg:pt-44 lg:pb-24">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Our Story · 11+ Years of Trusted Beauty Expertise</p>
       <h1 class="mt-5 font-serif text-5xl sm:text-6xl lg:text-7xl text-[#1a1a1a] leading-[1.05] max-w-4xl">Beauty, <span class="italic text-[#b08d4f] font-black">reimagined</span> for every day.</h1>
       <p class="mt-6 max-w-2xl text-lg text-[#3a3a3a] leading-relaxed">Welcome to Skin &amp; Scissor Salon — a new-age family beauty destination where comfort meets expert care. For over a decade, we've been crafting personalised skin, hair and beauty experiences using premium international products and advanced techniques.</p>
     </div>
   </section>
-  <section class="pb-24">
+  <section class="pb-20 lg:pb-24">
     <div class="w-full px-6 lg:px-12 grid lg:grid-cols-2 gap-14 items-center">
       <div class="relative">
         <div class="absolute -inset-5 rounded-[2rem] blur-2xl" style="background:linear-gradient(135deg,rgba(200,169,106,.3),rgba(200,169,106,.1));"></div>
@@ -438,7 +446,7 @@ function aboutPage() {
       </div>
     </div>
   </section>
-  <section class="py-24 bg-[#f0eae0]/60">
+  <section class="py-20 lg:py-24 bg-[#f0eae0]/60">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">The Three T's · Our Promise</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl text-[#1a1a1a] max-w-3xl">Trust. Transparency. <span class="italic text-[#b08d4f] font-black">Transformation.</span></h2>
@@ -448,7 +456,7 @@ function aboutPage() {
       </div>
     </div>
   </section>
-  <section class="py-24">
+  <section class="py-20 lg:py-24">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Inside the Salon</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl text-[#1a1a1a] max-w-3xl">A space designed for <span class="italic text-[#b08d4f] font-black">calm, care and craft.</span></h2>
@@ -457,7 +465,7 @@ function aboutPage() {
       </div>
     </div>
   </section>
-  <section class="py-24 bg-[#f0eae0]/60">
+  <section class="py-20 lg:py-24 bg-[#f0eae0]/60">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">What we stand for</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl text-[#1a1a1a] max-w-3xl">Six beliefs. <span class="italic text-[#b08d4f] font-black">One promise.</span></h2>
@@ -514,14 +522,14 @@ function servicesPage(activeId) {
 
 function locationsPage() {
   return `
-  <section class="pt-36 pb-14 lg:pt-44 lg:pb-20">
+  <section class="pt-36 pb-20 lg:pt-44 lg:pb-24">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Our Salons</p>
       <h1 class="mt-4 font-serif text-5xl sm:text-6xl lg:text-7xl text-[#1a1a1a] leading-[1.05]">Locations. <span class="italic text-[#b08d4f] font-black">One promise.</span></h1>
       <p class="mt-6 max-w-2xl text-lg text-[#3a3a3a] leading-relaxed">Wherever you are in Bangalore, refined beauty and honest care are never far. Walk in for a consultation or reserve your ritual in advance.</p>
     </div>
   </section>
-  <section class="pb-24">
+  <section class="pb-20 lg:pb-24">
     <div class="w-full px-6 lg:px-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       ${LOCATIONS.map(loc=>`
         <div class="p-8 rounded-2xl bg-[#ffffff] border border-[#e8e2d8] hover:shadow-xl hover:-translate-y-1 transition-all">
@@ -539,7 +547,7 @@ function locationsPage() {
         </div>`).join('')}
     </div>
   </section>
-  <section class="py-24 bg-[#f0eae0]/60">
+  <section class="py-20 lg:py-24 bg-[#f0eae0]/60">
     <div class="w-full px-6 lg:px-12">
       <p class="text-sm tracking-[0.35em] uppercase text-[#b08d4f] font-black">Connect with us</p>
       <h2 class="mt-4 font-serif text-4xl sm:text-5xl text-[#1a1a1a]">One team. <span class="italic text-[#b08d4f] font-black">Salons.</span></h2>
